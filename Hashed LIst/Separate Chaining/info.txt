@@ -1,0 +1,1 @@
+We can handle collision by creating linked list using one method which is in this directory

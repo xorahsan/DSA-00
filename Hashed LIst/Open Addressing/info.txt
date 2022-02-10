@@ -1,0 +1,5 @@
+We can handle collision without creating linked list using below three methods:
+
+    01) Linear Probing
+    02) Quardratic Probing
+    03) Double Hashing

@@ -1,0 +1,16 @@
+Hashed List Collision Handling Types:
+    01) Open Addressing
+    02) Chain Separting
+
+Open Addressing:
+Editing/Extending/Deleting/Updating Array but work in hash table only
+(Note that we can increase table size by copying old data if needed)
+
+Chain Separting:
+making a linked list with every element having Collision
+
+example:
+    when index = i % 10
+    0 : 0
+    1 : 1
+    2 : [2,12,22,32] <=== Linked List
