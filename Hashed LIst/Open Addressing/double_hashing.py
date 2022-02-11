@@ -1,4 +1,4 @@
-normal_table = [55, 37, 83, 91, 48,63,1,47]
+normal_table = [55, 37, 83, 91, 51,67,97,47,17]
 
 n = 10
 hash_table = []
@@ -10,10 +10,16 @@ for i in normal_table:
     index = i % 10
     if hash_table[index] != None:
         
+        hash2 = 9-(i%9)
+
+        def final_hash_id(times):
+            return (index + (times*hash2)) % 10
+
+
         j = 1
         tries = 1
         while True:
-            next_index = (index+(j**2))%10
+            next_index = final_hash_id(j)
             
             print("Cracking!")
             print("Try no: ",tries)
@@ -38,8 +44,15 @@ if hash_table[index] == search_id:
     print(search_id, " found!")
 else:
     c =1
+
+    hash2 = 9-(i%9)
+
+    def final_hash_id(times):
+        return (index + (times*hash2)) % 10
+
+
     while True:
-        next_id = (index + (c**2))%10
+        next_id = final_hash_id(c)
         if hash_table[next_id] == search_id:
             print(search_id, " found! (Plagirasim)")
             break
@@ -62,7 +75,8 @@ Worst and Average Case O(n)
 
 Cons:
 
-01) When the hash table is half full or more, the algorithm starts to take infinite time calculate index
-Because at bigger number we only get 1,4,5,6,9 only so if there is 3 then it wont calculate
+01) System memory/CPU usage
+02) difficult to implement
+
 
 """

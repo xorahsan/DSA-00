@@ -59,12 +59,12 @@ print(hash_table)
 
 
 """
-Cons:
+Pros:
 
 Best Case O(1)
 Worst and Average Case O(n)
 
-Pros:
+Cons:
 
 01) When there are three numbers with same mod value (i.e 0), so for the second time, the loop will unecceserily move towards the second value where it knows the first value so it should start from the second value to be time efficent
 
