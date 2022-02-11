@@ -1,4 +1,4 @@
-normal_table = [55, 37, 83, 91, 48,63,1,3,33]
+normal_table = [55, 37, 83, 91, 48,63,1,47]
 
 n = 10
 hash_table = []
@@ -19,7 +19,7 @@ for i in normal_table:
             print("Try no: ",tries)
             if hash_table[next_index] == None:
                 hash_table[next_index] = i
-                
+                print("Sucessfully cracked! ")
                 break
             
             tries = tries +1
@@ -37,24 +37,19 @@ index = search_id % 10
 if hash_table[index] == search_id:
     print(search_id, " found!")
 else:
-    
-    j = (search_id%10) +1
-    new_c = 0
-    check_found = False
-    while new_c < len(hash_table)-1:
-        if hash_table[j] == search_id:
-            check_found = True
-            print(search_id, " found! (Plagirasm)")
+    c =1
+    while True:
+        next_id = (index + (c**2))%10
+        if hash_table[next_id] == search_id:
+            print(search_id, " found! (Plagirasim)")
             break
-        
-        if j == len(hash_table)-1:
-            j = 0
         else:
-            j = j+1
-        new_c = new_c +1
-
-    if check_found == False:
-        print(search_id, "does not found!")
+            print("Try no",c)
+        c =c+1
+        if c > 20:
+            print("Not found!")
+            break
+    
 
 print(hash_table)
 
@@ -68,6 +63,6 @@ Worst and Average Case O(n)
 Pros:
 
 01) When the hash table is half full or more, the algorithm starts to take infinite time calculate index
-
+Because at bigger number we only get 1,4,5,6,9 only so if there is 3 then it wont calculate
 
 """
