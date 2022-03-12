@@ -1,0 +1,8 @@
+Data should be sorted
+data should be uniformly distributed
+
+data shoud be numbers
+
+complexity:
+average : O(log(logn))
+worst: O(n)
