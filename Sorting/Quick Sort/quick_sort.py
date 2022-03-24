@@ -19,3 +19,8 @@ def quickSort(arr):
 
 
 print(quickSort(unsorted_array))
+
+# Best case: O(nlogn)
+# Average case: O(nlogn)
+# Worst case: O(n2)
+# Space complexity: O(logn)
