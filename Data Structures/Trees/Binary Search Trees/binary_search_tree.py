@@ -46,7 +46,6 @@ class BinarySearchTree:
                 self.left = BinarySearchTree(data)
 
 
-            
 
         if data > self.data:
 
@@ -62,13 +61,26 @@ class BinarySearchTree:
 
         temp_arr = []
 
-        if self.left:
-            temp_arr = temp_arr + self.left.in_order_traversal()
 
-        temp_arr = temp_arr + [self.data]
+        # for descending order
+
+        # if self.right:
+        #     temp_arr = temp_arr + self.right.in_order_traversal()
+
+        # temp_arr = temp_arr + [self.data]
+
+        # if self.left:
+        #     temp_arr = temp_arr + self.left.in_order_traversal()
+
+        # for ascending order
+
+        if self.left:
+            temp_arr += self.left.in_order_traversal()
+
+        temp_arr += [self.data]
 
         if self.right:
-            temp_arr = temp_arr + self.right.in_order_traversal()
+            temp_arr += self.right.in_order_traversal()
 
         return temp_arr
 

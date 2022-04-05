@@ -10,11 +10,8 @@ def quickSort(arr):
         smaller_than_pivot, greater_than_pivot = [],[]
         
         for element in arr:
-            if element < pivot:
-                smaller_than_pivot.append(element)
-            else:
-                greater_than_pivot.append(element)
-        
+            smaller_than_pivot.append(element) if element < pivot else greater_than_pivot.append(element)
+                
         return quickSort(smaller_than_pivot) + [pivot] + quickSort(greater_than_pivot)
 
 
